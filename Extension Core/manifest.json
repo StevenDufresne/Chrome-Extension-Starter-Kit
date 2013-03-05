@@ -1,0 +1,39 @@
+{ //required
+  "name": "Insert Extension Name Here",
+  "version": "1.0.0.0",
+  "manifest_version": 2,
+
+//optional
+  "description": "Little excerpt that will show up in the description of your extension.",
+//Source: http://developer.chrome.com/extensions/manifest.html
+
+//Basic permission setup, for more check source
+  "permissions" : [
+    "tabs",
+    "http://*/",
+    "https://*/"
+  ],
+//Source: http://developer.chrome.com/extensions/permissions.html
+
+//Used for Event Pages
+  "background": { 
+    "scripts": ["popup.js"],
+    "persistence": "true"
+  },
+//Source: http://developer.chrome.com/extensions/event_pages.html
+
+//Basic browser action setup, for more check source
+  "browser_action": {
+    "default_icon": "19-icon.png",
+    "default_popup": "popup.html" 
+  },
+//Soure: http://developer.chrome.com/extensions/browserAction.html
+  
+//you can change the file names
+    "icons" : {
+    "16" : "16-icon.png",
+    "48" : "48-icon.png",
+    "128" : "128-icon.png"
+  },
+
+}
